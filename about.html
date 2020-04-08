@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KSlavovich</title>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+
+	<script src="js/jquery.min.js"></script>
+
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+
+	<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="js/megamenu.js"></script>
+	<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+
+	<script>
+		fetch("./header.html")
+				.then(response => {
+					return response.text()
+				})
+				.then(data => {
+					document.querySelector("header").innerHTML = data;
+				});
+
+		fetch("./footer.html")
+				.then(response => {
+					return response.text()
+				})
+				.then(data => {
+					document.querySelector("footer").innerHTML = data;
+				});
+	</script>
+
+<script src="js/simpleCart.min.js"> </script>
+
+</head>
+<body> 
+<header></header>
+<div class="container">
+	<h6 class="dress"><a href="index.html">Главная</a> <i> </i> О нас </h6>
+</div>
+<div class="back">
+	<h2>О НАС</h2>
+</div>
+		<!---->
+		<div class="container"> 
+	  <div class="box_4">
+	  	<div class="col-md-8 about_left">
+	  		<h3>Немного о мыле ручной работы </h3>
+	        <img src="https://avatars.mds.yandex.net/get-pdb/251121/d2ef5245-c6b0-481a-ae94-1f6d3d2a945c/s1200?webp=false" class="img-responsive" alt="">
+		    <p></p>
+	       <div class="faqs">
+				       <h4>Почему мы?</h4>
+				       <div class="questions">
+							<h5>1.Индивидуальный подход к каждому</h5>
+	        				<p>Мы изготавливаем уникальное мыло ручной работы на заказ. </p>
+	        		   </div>
+	        		   
+			        		  <!-- <div class="questions">
+									<h5>2.</h5>
+			        				<p></p>
+			        			</div>				    -->
+				   </div>  	
+	  	</div>
+	  	<div class="col-md-4 sidebar">
+	  		      <h3>Плюсы нашего мыла</h3>
+		  			    <div class="testimonials">
+		  					 <h5>Гипоаллергенность<span><a href="#"></a></span></h5>
+		  					 <p><span class="quotes"></span>В состав мыла входят только натуральные продукты которые необходимы для нашей кожи.<span class="quotes-down"></span></p>
+		  				</div>	
+		  				<div class="testimonials">
+		  					 <h5>Гигиена<span><a href="#"></a></span></h5>
+		  					 <p><span class="quotes"></span>содержащиеся в натуральном мыле масла и добавки обладают бактерицидным, антисептическим и противовоспалительным действиями.<span class="quotes-down"></span></p>
+		  				</div>
+		  				<div class="testimonials">
+		  					 <h5>Декоративность<span><a href="#"></a></span></h5>
+		  					 <p><span class="quotes"></span>Эксклюзивность каждого кусочка может стать удивительным подарком, и поводом побаловать себя и своих близких.Даже самые простые нарезные мыла при сочетании слоев дают такой результат, которому позавидует художник. Взяв в руки кусочек такого мыла, невозможно остаться равнодушным. Стоит ли говорить, что это не только оригинальный, но и полезный подарок!<span class="quotes-down"></span></p>
+		  				</div>
+		  			
+	  	</div>
+	  	<div class="clearfix"> </div>
+	  </div>
+  
+          	</div>
+
+					
+<footer></footer>
+<!--подключить footer-->
+</body>
+</html>

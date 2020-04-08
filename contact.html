@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>KSlavovich</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+
+<script src="js/jquery.min.js"></script>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+
+
+<script>
+	fetch("./header.html")
+			.then(response => {
+				return response.text()
+			})
+			.then(data => {
+				document.querySelector("header").innerHTML = data;
+			});
+
+	fetch("./footer.html")
+			.then(response => {
+				return response.text()
+			})
+			.then(data => {
+				document.querySelector("footer").innerHTML = data;
+			});
+</script>
+
+<script src="js/simpleCart.min.js"> </script>
+</head>
+<body>
+<header></header>
+<div class="container">
+	<h6 class="dress"><a href="index.html">Главная</a> <i> </i> Обратная связь </h6>
+</div>
+<div class="back">
+	<h2>ОБРАТНАЯ СВЯЗЬ</h2>
+</div>
+		<!---->
+		<div class="container">
+			<div class="contact">
+			
+				<div class=" contact-top-in">
+
+				</div>
+				<form method="post" action="contact.php">
+				<div class=" contact-top">
+					<h3>Хотите поделиться своими впечатлениями?</h3>
+					<h3>Напишите нам</h3>
+					<div>
+						<span>Ваше имя </span>
+						<input type="text" name="name" value="" >
+					</div>
+					<div>
+						<span>Ваш Email </span>
+						<input type="text" name="email" value="" >
+					</div>
+					<div>
+						<span>Тема</span>
+						<input type="text" name="subject" value="" >
+					</div>
+					<div>
+						<span>Ваше сообщение</span>
+						<textarea name="message"> </textarea>
+					</div>
+						<input type="submit" value="ОТПРАВИТЬ" >
+				</div>
+				</form>
+		
+		</div>
+	</div>
+					
+<footer></footer>
+<!--подключить footer-->
+</body>
+</html>
