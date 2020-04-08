@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
-<title>KSlavovich</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<title>KSlavovich</title>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 
-<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
-<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 
-<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="js/megamenu.js"></script>
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+	<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="js/megamenu.js"></script>
+	<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 
 	<script>
 		fetch("./header.html")
@@ -38,9 +38,9 @@
 				});
 	</script>
 
-<script src="js/simpleCart.min.js"> </script>
+	<script src="js/simpleCart.min.js"> </script>
 </head>
-<body> 
+<body>
 <header></header>
 <div class="container">
 	<h6 class="dress"><a href="index.html">Главная</a> <i> </i> Аккаунт </h6>
@@ -48,7 +48,37 @@
 <div class="back">
 	<h2>АККАУНТ</h2>
 </div>
-		
+
+<div class="container">
+	<div class="account_grid">
+		<div class=" login-right">
+			<h3>РЕГЕСТРАЦИЯ</h3>
+			<p>Если Вы зарегестрированны войдите в аккаунт.</p>
+			<form>
+				<form method="post" action="login.php">
+				<div>
+					<span>E-mail</span>
+					<input type="text" name="email">
+				</div>
+				<div>
+					<span>Пароль</span>
+					<input type="text" name="password1">
+				</div>
+				<a class="forgot" href="#">Забыли пароль?</a>
+				<input type="submit" value="ВОЙТИ">
+
+		</div>
+		</form>
+	</form>
+		<div class=" login-left">
+			<h3></h3>
+			<p></p>
+			<a class="acount-btn" href="register.html">Зарегестрироваться</a>
+		</div>
+
+	</div>
+
+</div>
 <footer></footer>
 <!--подключить footer-->
 </body>
