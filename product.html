@@ -22,7 +22,7 @@
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 
 	<script>
-		fetch("./header.html")
+		fetch("./header.php")
 				.then(response => {
 					return response.text()
 				})
@@ -43,12 +43,379 @@
 <body> 
 <header></header>
 <div class="container">
-	<h6 class="dress"><a href="index.html">Home</a> <i> </i> Dress &amp; T-shirt </h6>
+	<h6 class="dress"><a href="index.php">Главная</a> <i> </i> Мыло </h6>
 </div>
 <div class="back">
 	<h2>КАТАЛОГ</h2>
 </div>
 
+		<div class="product">
+			<div class="container">
+				<div class="col-md-3 product-price">
+					  <div class="price-grid">
+					    <div class="of-left">
+						
+					</div>
+	  <ul class="dropdown-menu1">
+     </div>
+				<div class=" rsidebar span_1_of_left">
+					<div class="of-left">
+						<h3 class="cate">CATEGORIES</h3>
+					</div>
+		 <ul class="menu">
+		<li class="item1"><a href="#">1 </a>
+			<ul class="cute">
+				<li class="subitem1"><a href="single.html">1.1 </a></li>
+				<li class="subitem2"><a href="single.html">1.2 </a></li>
+				<li class="subitem3"><a href="single.html">1.3 </a></li>
+			</ul>
+		</li>
+		<li class="item2"><a href="#">2 </a>
+			<ul class="cute">
+				<li class="subitem1"><a href="single.html">2.1 </a></li>
+				<li class="subitem2"><a href="single.html">2.2 </a></li>
+				<li class="subitem3"><a href="single.html">2.3 </a></li>
+			</ul>
+		</li>
+	</ul>
+					</div>
+
+		<script type="text/javascript">
+			$(function() {
+			    var menu_ul = $('.menu > li > ul'),
+			           menu_a  = $('.menu > li > a');
+			    menu_ul.hide();
+			    menu_a.click(function(e) {
+			        e.preventDefault();
+			        if(!$(this).hasClass('active')) {
+			            menu_a.removeClass('active');
+			            menu_ul.filter(':visible').slideUp('normal');
+			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+			        } else {
+			            $(this).removeClass('active');
+			            $(this).next().stop(true,true).slideUp('normal');
+			        }
+			    });
+
+			});
+		</script>
+				<div class="product-bottom">
+					<div class="of-left-in">
+								<h3 class="best">Лучшая цена</h3>
+							</div>
+					<div class="product-go">
+						<div class=" fashion-grid">
+									<a href="single.html"><img class="img-responsive " src="images/be.jpg" alt=""></a>
+
+								</div>
+							<div class=" fashion-grid1">
+								<h6 class="best2"><a href="single.html" >1</a></h6>
+
+								<span class=" price-in1">40.00 Р</span>
+							</div>
+
+							<div class="clearfix"> </div>
+							</div>
+							<div class="product-go">
+						<div class=" fashion-grid">
+									<a href="single.html"><img class="img-responsive " src="images/be1.jpg" alt=""></a>
+
+								</div>
+							<div class="fashion-grid1">
+								<h6 class="best2"><a href="single.html" >2</a></h6>
+
+								<span class=" price-in1">40.00 Р</span>
+							</div>
+
+							<div class="clearfix"> </div>
+							</div>
+							<div class="product-go">
+						<div class=" fashion-grid">
+									<a href="single.html"><img class="img-responsive " src="images/be2.jpg" alt=""></a>
+
+								</div>
+							<div class=" fashion-grid1">
+								<h6 class="best2"><a href="single.html" >3 </a></h6>
+								
+								<span class=" price-in1"><small>70.00 Р </small>40.00 Р</span>
+							</div>
+
+							<div class="clearfix"> </div>
+							</div>
+				</div>
+<div class=" per1">
+				
+			</div>
+				</div>
+
+
+				<div class="col-md-9 product-price1">
+					<div class="mens-toolbar">
+							                 <div class="sort">
+			            
+	    		     </div>
+
+                	<div class="clearfix"></div>
+		        </div>
+		        <div class="product-right-top">
+		        	<div class="top-product">
+		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
+		        			<div class="grid-span-1">
+	   		     		<a  href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=" ">
+	   		     			<div class="link">
+	   		     			<ul >
+										<li><i> </i></li>
+										<li><i class="white1"> </i></li>
+							</ul>
+	   		     		</div>
+	   		     		</a>
+	   		     	</div>
+	   		     		<div class="grid-chain-bottom ">
+	   		     			<h6><a href="single.html">1</a></h6>
+	   		     			<div class="star-price">
+	   		     				<div class="price-at">
+		   		     				<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									</div>
+									<div class="price-at-bottom ">
+										<span class="item_price">75.00 Р</span>
+									</div>
+	   		     				<div class="clearfix"> </div>
+							</div>
+							<div class="cart-add">
+								<a class="add1 item_add" href="#">Добавить в корзину <i> </i></a>
+								<a class="add2" href="#"><i> </i></a>
+								<div class="clearfix"> </div>
+							</div>
+	   		     		</div>
+
+	   		     	</div>
+	   		     			        <div class="product-right-top">
+		        	<div class="top-product">
+		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
+		        			<div class="grid-span-1">
+	   		     		<a  href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=" ">
+	   		     			<div class="link">
+	   		     			<ul >
+										<li><i> </i></li>
+										<li><i class="white1"> </i></li>
+							</ul>
+	   		     		</div>
+	   		     		</a>
+	   		     	</div>
+	   		     		<div class="grid-chain-bottom ">
+	   		     			<h6><a href="single.html">1</a></h6>
+	   		     			<div class="star-price">
+	   		     				<div class="price-at">
+		   		     				<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									</div>
+									<div class="price-at-bottom ">
+										<span class="item_price">75.00 Р</span>
+									</div>
+	   		     				<div class="clearfix"> </div>
+							</div>
+							<div class="cart-add">
+								<a class="add1 item_add" href="#">Добавить в корзину <i> </i></a>
+								<a class="add2" href="#"><i> </i></a>
+								<div class="clearfix"> </div>
+							</div>
+	   		     		</div>
+
+	   		     	</div>
+	   		     	
+	   		     			        <div class="product-right-top">
+		        	<div class="top-product">
+		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
+		        			<div class="grid-span-1">
+	   		     		<a  href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=" ">
+	   		     			<div class="link">
+	   		     			<ul >
+										<li><i> </i></li>
+										<li><i class="white1"> </i></li>
+							</ul>
+	   		     		</div>
+	   		     		</a>
+	   		     	</div>
+	   		     		<div class="grid-chain-bottom ">
+	   		     			<h6><a href="single.html">1</a></h6>
+	   		     			<div class="star-price">
+	   		     				<div class="price-at">
+		   		     				<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									</div>
+									<div class="price-at-bottom ">
+										<span class="item_price">75.00 Р</span>
+									</div>
+	   		     				<div class="clearfix"> </div>
+							</div>
+							<div class="cart-add">
+								<a class="add1 item_add" href="#">Добавить в корзину <i> </i></a>
+								<a class="add2" href="#"><i> </i></a>
+								<div class="clearfix"> </div>
+							</div>
+	   		     		</div>
+
+	   		     	</div>
+	   		     	
+	   		     			        <div class="product-right-top">
+		        	<div class="top-product">
+		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
+		        			<div class="grid-span-1">
+	   		     		<a  href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=" ">
+	   		     			<div class="link">
+	   		     			<ul >
+										<li><i> </i></li>
+										<li><i class="white1"> </i></li>
+							</ul>
+	   		     		</div>
+	   		     		</a>
+	   		     	</div>
+	   		     		<div class="grid-chain-bottom ">
+	   		     			<h6><a href="single.html">1</a></h6>
+	   		     			<div class="star-price">
+	   		     				<div class="price-at">
+		   		     				<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									</div>
+									<div class="price-at-bottom ">
+										<span class="item_price">75.00 Р</span>
+									</div>
+	   		     				<div class="clearfix"> </div>
+							</div>
+							<div class="cart-add">
+								<a class="add1 item_add" href="#">Добавить в корзину <i> </i></a>
+								<a class="add2" href="#"><i> </i></a>
+								<div class="clearfix"> </div>
+							</div>
+	   		     		</div>
+
+	   		     	</div>
+	   		     	
+	   		     			        <div class="product-right-top">
+		        	<div class="top-product">
+		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
+		        			<div class="grid-span-1">
+	   		     		<a  href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=" ">
+	   		     			<div class="link">
+	   		     			<ul >
+										<li><i> </i></li>
+										<li><i class="white1"> </i></li>
+							</ul>
+	   		     		</div>
+	   		     		</a>
+	   		     	</div>
+	   		     		<div class="grid-chain-bottom ">
+	   		     			<h6><a href="single.html">1</a></h6>
+	   		     			<div class="star-price">
+	   		     				<div class="price-at">
+		   		     				<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									</div>
+									<div class="price-at-bottom ">
+										<span class="item_price">75.00 Р</span>
+									</div>
+	   		     				<div class="clearfix"> </div>
+							</div>
+							<div class="cart-add">
+								<a class="add1 item_add" href="#">Добавить в корзину <i> </i></a>
+								<a class="add2" href="#"><i> </i></a>
+								<div class="clearfix"> </div>
+							</div>
+	   		     		</div>
+
+	   		     	</div>
+	   		     			        <div class="product-right-top">
+		        	<div class="top-product">
+		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
+		        			<div class="grid-span-1">
+	   		     		<a  href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=" ">
+	   		     			<div class="link">
+	   		     			<ul >
+										<li><i> </i></li>
+										<li><i class="white1"> </i></li>
+							</ul>
+	   		     		</div>
+	   		     		</a>
+	   		     	</div>
+	   		     		<div class="grid-chain-bottom ">
+	   		     			<h6><a href="single.html">1</a></h6>
+	   		     			<div class="star-price">
+	   		     				<div class="price-at">
+		   		     				<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									</div>
+									<div class="price-at-bottom ">
+										<span class="item_price">75.00 Р</span>
+									</div>
+	   		     				<div class="clearfix"> </div>
+							</div>
+							<div class="cart-add">
+								<a class="add1 item_add" href="#">Добавить в корзину <i> </i></a>
+								<a class="add2" href="#"><i> </i></a>
+								<div class="clearfix"> </div>
+							</div>
+	   		     		</div>
+
+	   		     		
+
+	   		     	</div>
+	   		     	<div class="clearfix"> </div>
+
+		        <ul class="start">
+					<li><a href="#"><i> </i></a></li>
+					<li><span>1</span></li>
+					<li class="arrow"><a href="#">2</a></li>
+					<li class="arrow"><a href="#">3</a></li>
+
+
+					<li><a href="#"><i class="next"> </i></a></li>
+				</ul>
+				<div class="clearfix"> </div>
+				</div>
+
+			<div class="clearfix"> </div>
+
+				<div class="shipping">
+					<div class="col-md-3 col-md1">
+
+			<div class="clearfix"> </div>
+			</div>
+
+				</div>
+
+
+<!---->
 <footer></footer>
 <script src="js/simpleCart.min.js"> </script>
 <!--подключить footer-->

@@ -9,7 +9,7 @@ $email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
-  $to = "ser.kokhov@gmail.com";
+  $to = "kslavovich@gmail.com";
   $headers  = $email;
 
 

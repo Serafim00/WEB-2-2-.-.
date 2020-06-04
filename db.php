@@ -1,7 +1,10 @@
-$host = 'localhost'; // адрес сервера
-$database = 'id13191462_soap'; // имя базы данных
-$user = 'id13191462_kslavovich'; // имя пользователя
-$password = '9Z}lGh(lq?SDKo\/'; // пароль
-// подключаемся к серверу
-$link = mysqli_connect($host, $user, $password, $database)
-    or die("Ошибка " . mysqli_error($link));
+<?php 
+require 'libs/rb.php';
+R::setup( 'mysql:host=127.0.0.1;dbname=userlistdb','root', '' ); 
+
+if ( !R::testconnection() )
+{
+		exit ('Нет соединения с базой данных');
+}
+
+session_start();
