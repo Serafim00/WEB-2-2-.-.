@@ -70,7 +70,7 @@
                         <li><a  href="contact.html" style="color:red;">Обратная связь</a></li>
                         <!--<li class="active grid"><a  href="#" style="color:red;">Магазин</a>-->
                         <li><a href="about.html" style="color:red;">О нас</a></li>
-                        <li><a href="product.html" style="color:red;">Магазин</a></li>
+                        <li><a href="product.php" style="color:red;">Магазин</a></li>
                         <li><a  href="#" style="color:red;">Акция</a>
                             <div class="megapanel">
                                 <div class="row">
