@@ -5,6 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<?php
+	session_start(); 
+	?>
 <title>KSlavovich</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -100,16 +103,16 @@
 		 <ul class="menu">
 		<li class="item1"><a href="#">1 </a>
 			<ul class="cute">
-				<li class="subitem1"><a href="single.html">1.1 </a></li>
-				<li class="subitem2"><a href="single.html">1.2 </a></li>
-				<li class="subitem3"><a href="single.html">1.3 </a></li>
+				<li class="subitem1"><a href="#">1.1 </a></li>
+				<li class="subitem2"><a href="#">1.2 </a></li>
+				<li class="subitem3"><a href="#">1.3 </a></li>
 			</ul>
 		</li>
 		<li class="item2"><a href="#">2 </a>
 			<ul class="cute">
-				<li class="subitem1"><a href="single.html">2.1 </a></li>
-				<li class="subitem2"><a href="single.html">2.2 </a></li>
-				<li class="subitem3"><a href="single.html">2.3 </a></li>
+				<li class="subitem1"><a href="#">2.1 </a></li>
+				<li class="subitem2"><a href="#">2.2 </a></li>
+				<li class="subitem3"><a href="#">2.3 </a></li>
 			</ul>
 		</li>
 	</ul>
@@ -147,9 +150,9 @@
 
 								</div>
 							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="single.html" >1</a></h6>
+								<h6 class="best2"><a href="#" >1</a></h6>
 
-								<span class=" price-in1">40.00 Р</span>
+								<span class=" price-in1">40.00 ₽</span>
 							</div>
 
 							<div class="clearfix"> </div>
@@ -160,9 +163,9 @@
 
 								</div>
 							<div class="fashion-grid1">
-								<h6 class="best2"><a href="single.html" >2</a></h6>
+								<h6 class="best2"><a href="#" >2</a></h6>
 
-								<span class=" price-in1">40.00 Р</span>
+								<span class=" price-in1">40.00 ₽</span>
 							</div>
 
 							<div class="clearfix"> </div>
@@ -173,9 +176,9 @@
 
 								</div>
 							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="single.html" >3 </a></h6>
+								<h6 class="best2"><a href="#" >3 </a></h6>
 								
-								<span class=" price-in1"><small>70.00 Р </small>40.00 Р</span>
+								<span class=" price-in1"><small>70.00 Р </small>40.00 ₽</span>
 							</div>
 
 							<div class="clearfix"> </div>
@@ -188,10 +191,17 @@
 				<div class="col-md-9 product-price1">
 				<div class="col-md-5 single-top">
 					<?php
+					$data = $_POST;
+
 					$link=mysqli_connect('localhost', 'root', '', 'userlistdb')
 						or die("Ошибка " . mysqli_error($link)); 
+					
+					$url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+					
+					$n = $_GET['id'];
 
-					$query ="SELECT * FROM `products` WHERE id='4'";
+ 				    
+					$query ="SELECT * FROM `products` WHERE id='$n'";
 
 					$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
 					while($row = mysqli_fetch_array($result)){
@@ -203,6 +213,7 @@
 					    	$description=$row['description'];
 					 		$img=$row['image'];
 				    }
+				    
 					  
 					?>
 					<img style="height: 300px; width: 270px" src="/images/<?php echo "$img"?>">
@@ -226,7 +237,7 @@
 							<div class="clearfix"> </div>
 							</div>
 
-							<h5 class="item_price"><?php echo "<p>$price </p>"?></h5>
+							<h5 class="item_price"><?php echo "<p>$price ₽</p>"?></h5>
 							<p><?php echo "<p>$description </p>"?></p>
 							<div class="available">
 								<ul>

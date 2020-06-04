@@ -83,61 +83,8 @@
 			<li><a  href="contact.html">Обратная связь</a></li>
 			<!--<li><a  href="index.html">Главная</a></li>-->
 
-			<li class="active grid"><a  href="#">Магазин</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Меню</h4>
-								<ul>
-									<li><a href="about.html">О нас</a></li>
-									<li><a href="product.php">Мыло</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<li><a  href="#">Популярное</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class=" col-nav">
-							<div class="h_nav">
-								<h4>Лучшая цена</h4>
-								<div class="sell">
-									<div class="men">
-										<a href="product.php"><img src="#" alt="" ></a>
-									</div>
-									<div class="men-in">
-										<h6>мыло1</h6>
-										<span>цена</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-								<div class="sell">
-									<div class="men">
-										<a href="product.php"><img src="#" alt="" ></a>
-									</div>
-									<div class="men-in">
-										<h6>мыло1</h6>
-										<span>цена</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-								<div class="sell">
-									<div class="men">
-										<a href="product.php"><img src="#" alt="" ></a>
-									</div>
-									<div class="men-in">
-										<h6>мыло1</h6>
-										<span>цена</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</div>
-						</div>
-					</div>
-    				</div>
+			<li class="active grid"><a  href="product.php">Мыло</a>
+			<li><a  href="about.html">О нас</a>
 				</li>
 
 		 </ul>

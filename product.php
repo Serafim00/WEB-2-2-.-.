@@ -65,16 +65,16 @@
 		 <ul class="menu">
 		<li class="item1"><a href="#">1 </a>
 			<ul class="cute">
-				<li class="subitem1"><a href="single.php">1.1 </a></li>
-				<li class="subitem2"><a href="single.php">1.2 </a></li>
-				<li class="subitem3"><a href="single.php">1.3 </a></li>
+				<li class="subitem1"><a href="#">1.1 </a></li>
+				<li class="subitem2"><a href="#">1.2 </a></li>
+				<li class="subitem3"><a href="#">1.3 </a></li>
 			</ul>
 		</li>
 		<li class="item2"><a href="#">2 </a>
 			<ul class="cute">
-				<li class="subitem1"><a href="single.php">2.1 </a></li>
-				<li class="subitem2"><a href="single.php">2.2 </a></li>
-				<li class="subitem3"><a href="single.php">2.3 </a></li>
+				<li class="subitem1"><a href="#">2.1 </a></li>
+				<li class="subitem2"><a href="#">2.2 </a></li>
+				<li class="subitem3"><a href="#">2.3 </a></li>
 			</ul>
 		</li>
 	</ul>
@@ -109,9 +109,9 @@
 
 								</div>
 							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="single.php" >1</a></h6>
+								<h6 class="best2"><a href="#" >1</a></h6>
 
-								<span class=" price-in1">40.00 Р</span>
+								<span class=" price-in1">40.00 ₽</span>
 							</div>
 
 							<div class="clearfix"> </div>
@@ -122,9 +122,9 @@
 
 								</div>
 							<div class="fashion-grid1">
-								<h6 class="best2"><a href="single.php" >2</a></h6>
+								<h6 class="best2"><a href="#" >2</a></h6>
 
-								<span class=" price-in1">40.00 Р</span>
+								<span class=" price-in1">40.00 ₽</span>
 							</div>
 
 							<div class="clearfix"> </div>
@@ -135,9 +135,9 @@
 
 								</div>
 							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="single.php" >3 </a></h6>
+								<h6 class="best2"><a href="#" >3 </a></h6>
 								
-								<span class=" price-in1"><small>70.00 Р </small>40.00 Р</span>
+								<span class=" price-in1"><small>70.00 ₽</small>40.00 Р</span>
 							</div>
 
 							<div class="clearfix"> </div>
@@ -178,35 +178,63 @@
 		        </div>
 		        <div class="product-right-top">
 		        	<div class="top-product">
-		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
-		        			<div class="grid-span-1">
-	   		     		<a  href="single.php"><img class="img-responsive " src="/images/<?php echo "$img"?>" alt=" ">
+		        		<?php
+$data = $_POST;
+$link=mysqli_connect('localhost', 'root', '', 'userlistdb')
+or die("Ошибка " . mysqli_error($link)); 
+			
+$sql_select = "SELECT * FROM products";
+$result = mysqli_query($link, $sql_select);
+			
+$row = mysqli_fetch_array($result);
+do
+{
+	        $id=$row['id'];
+			$name=$row['name'];
+			$price=$row['price'];
+			$description=$row['description'];
+			$img=$row['image'];
+					
+  $_SESSION['id'] = 4; 
+	printf("<form action='single.php' method='POST'>
+		<div class='col-md-4 chain-grid  simpleCart_shelfItem'>
+		        			<div class='grid-span-1'>
+	   		     				<a  href='single.php?id=$id'><img class='img-responsive' style='height: 100px; width: 100px' src='/images/$img ' alt=''>
+		   		     			<div class='link'>
+		   		     			<ul >
+											<li><i> </i></li>
+											<li><i class='white1'> </i></li>
+								</ul>
+		   		     		</div>
+		   		     		</a>
+		   		     	</div>
+		   		     		<div class='grid-chain-bottom ''>
+		   		     			<h8><a href='single.php?id=$id'><php echo '<p>$name </p></a></h8>
+		   		     			<div class='star-price'>
+		   		     				<div class='price-at'>
+			   		     													</div>
+										<div class='price-at-bottom '>
+											<span class='item_price'><php echo '<p>$price ₽</p></span>
+										</div>
+		   		     				<div class='clearfix'> </div>
+								</div>
+								<div class='cart-add'>
+									<a class='add1 item_add' href='#''>Добавить в корзину <i> </i></a>
+									<a class='add2' href='#''><i> </i></a>
+									<div class='clearfix'> </div>
+								</div>
+		   		     		</div>
+		   		     	</div>
+		   		     </form>"
 
-	   		     			<div class="link">
-	   		     			<ul >
-										<li><i> </i></li>
-										<li><i class="white1"> </i></li>
-							</ul>
-	   		     		</div>
-	   		     		</a>
-	   		     	</div>
-	   		     		<div class="grid-chain-bottom ">
-	   		     			<h8><a href="single.php"><?php echo "<p>$name </p>"?></a></h8>
-	   		     			<div class="star-price">
-	   		     				<div class="price-at">
-		   		     													</div>
-									<div class="price-at-bottom ">
-										<span class="item_price" align="center"><?php echo "<p>$price </p>"?></span>
-									</div>
-	   		     				<div class="clearfix"> </div>
-							</div>
-							<div class="cart-add">
-								<a class="add1 item_add" href="#">Добавить в корзину <i> </i></a>
-								<a class="add2" href="#"><i> </i></a>
-								<div class="clearfix"> </div>
-							</div>
-	   		     		</div>
-	   		     	</div>
+
+
+
+);
+
+}
+while($row = mysqli_fetch_array($result));
+         ?>
 	   		  
 	   		     	<div class="clearfix"> </div>
 
