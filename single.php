@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -180,33 +184,34 @@
 				<div class=" per1">
 			</div>
 		</div>
+
 				<div class="col-md-9 product-price1">
 				<div class="col-md-5 single-top">
-						<ul id="etalage">
-							<li>
-								<a href="optionallink.html">
-									<img class="etalage_thumb_image img-responsive" src="images/si1.jpg" alt="" >
-									<img class="etalage_source_image img-responsive" src="images/si1.jpg" alt="" >
-								</a>
-							</li>
-							<li>
-								<img class="etalage_thumb_image img-responsive" src="images/si2.jpg" alt="" >
-								<img class="etalage_source_image img-responsive" src="images/si2.jpg" alt="" >
-							</li>
-							<li>
-								<img class="etalage_thumb_image img-responsive" src="images/si.jpg" alt=""  >
-								<img class="etalage_source_image img-responsive" src="images/si.jpg" alt="" >
-							</li>
-						    <li>
-								<img class="etalage_thumb_image img-responsive" src="images/si1.jpg"  alt="" >
-								<img class="etalage_source_image img-responsive" src="images/si1.jpg" alt="" >
-							</li>
-						</ul>
+					<?php
+					$link=mysqli_connect('localhost', 'root', '', 'userlistdb')
+						or die("Ошибка " . mysqli_error($link)); 
+
+					$query ="SELECT * FROM `products` WHERE id='4'";
+
+					$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+					while($row = mysqli_fetch_array($result)){
+
+
+					    	$id=$row['id'];
+					    	$name=$row['name'];
+					    	$price=$row['price'];
+					    	$description=$row['description'];
+					 		$img=$row['image'];
+				    }
+					  
+					?>
+					<img style="height: 300px; width: 270px" src="/images/<?php echo "$img"?>">
 
 					</div>
+
 					<div class="col-md-7 single-top-in simpleCart_shelfItem">
 						<div class="single-para ">
-						<h4>#1</h4>
+						<h4><?php echo "<p>$name </p>"?></h4>
 							<div class="star-on">
 								<ul class="star-footer">
 										<li><a href="#"><i> </i></a></li>
@@ -221,8 +226,8 @@
 							<div class="clearfix"> </div>
 							</div>
 
-							<h5 class="item_price">40.00P</h5>
-							<p>Тут описание продукта. Очень подробное описание продукта. Описание продукта приходит из БД</p>
+							<h5 class="item_price"><?php echo "<p>$price </p>"?></h5>
+							<p><?php echo "<p>$description </p>"?></p>
 							<div class="available">
 								<ul>
 									<li>Выбор параметра
