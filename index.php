@@ -91,7 +91,7 @@
 								<h4>Меню</h4>
 								<ul>
 									<li><a href="about.html">О нас</a></li>
-									<li><a href="product.html">Мыло</a></li>
+									<li><a href="product.php">Мыло</a></li>
 								</ul>
 							</div>
 						</div>
@@ -106,7 +106,7 @@
 								<h4>Лучшая цена</h4>
 								<div class="sell">
 									<div class="men">
-										<a href="product.html"><img src="#" alt="" ></a>
+										<a href="product.php"><img src="#" alt="" ></a>
 									</div>
 									<div class="men-in">
 										<h6>мыло1</h6>
@@ -116,7 +116,7 @@
 								</div>
 								<div class="sell">
 									<div class="men">
-										<a href="product.html"><img src="#" alt="" ></a>
+										<a href="product.php"><img src="#" alt="" ></a>
 									</div>
 									<div class="men-in">
 										<h6>мыло1</h6>
@@ -126,7 +126,7 @@
 								</div>
 								<div class="sell">
 									<div class="men">
-										<a href="product.html"><img src="#" alt="" ></a>
+										<a href="product.php"><img src="#" alt="" ></a>
 									</div>
 									<div class="men-in">
 										<h6>мыло1</h6>
@@ -169,7 +169,7 @@
 </div>
 
 	<div class="now">
-	         <a class="morebtn" href="product.html">Купить</a>
+	         <a class="morebtn" href="product.php">Купить</a>
 
 	         <div class="clearfix"> </div>
 	         </div>
