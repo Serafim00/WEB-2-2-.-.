@@ -123,7 +123,7 @@
 			   </div>	
 			    <div class=" login-left">
 			  	 если у Вас нет аккаунта, Вы можете зарегестрироваться
-				 <a class="acount-btn" href="register.html">Зарегестрироваться</a>
+				 <a class="acount-btn" href="signup.php">Зарегестрироваться</a>
 			   </div>
 			
 			 </div>
