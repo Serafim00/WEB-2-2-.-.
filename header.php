@@ -71,7 +71,6 @@
                         <!--<li class="active grid"><a  href="#" style="color:red;">Магазин</a>-->
                         <li><a href="about.html" style="color:red;">О нас</a></li>
                         <li><a href="product.php" style="color:red;">Магазин</a></li>
-                        <li><a  href="#" style="color:red;">Акция</a>
                             <div class="megapanel">
                                 <div class="row">
                                     <div class=" col-nav">
@@ -111,7 +110,7 @@
                                 <span class="simpleCart_total1"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> товаров)</div>
                                 <img src="images/cart.png" alt=""/></h3>
                         </a>
-                        <p><a href="javascript:;" class="simpleCart_empty">Корзина</a></p>
+                        <p><a href="checkout.html" class="simpleCart_empty">Корзина</a></p>
                         <div class="clearfix"> </div>
                     </div>
 

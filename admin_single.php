@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -89,140 +85,32 @@
 	<h6 class="dress"><a href="index.php">Главная</a> <i> </i> Страница товара </h6>
 </div>
 <div class="back">
-	<h2>СТРАНИЦА ТОВАРА</h2>
+	<h2>ДОБАВЛЕНИЕ ТОВАРА</h2>
 </div>
 		
 		<div class="product">
 			<div class="container">
 				<div class="col-md-3 product-price">
-
-				<div class=" rsidebar span_1_of_left">
-					<div class="of-left">
-						<h3 class="cate">Категории</h3>
-					</div>
-		 <ul class="menu">
-		<li class="item1"><a href="#">1 </a>
-			<ul class="cute">
-				<li class="subitem1"><a href="#">1.1 </a></li>
-				<li class="subitem2"><a href="#">1.2 </a></li>
-				<li class="subitem3"><a href="#">1.3 </a></li>
-			</ul>
-		</li>
-		<li class="item2"><a href="#">2 </a>
-			<ul class="cute">
-				<li class="subitem1"><a href="#">2.1 </a></li>
-				<li class="subitem2"><a href="#">2.2 </a></li>
-				<li class="subitem3"><a href="#">2.3 </a></li>
-			</ul>
-		</li>
-	</ul>
-					</div>
-
-		<script type="text/javascript">
-			$(function() {
-			    var menu_ul = $('.menu > li > ul'),
-			           menu_a  = $('.menu > li > a');
-			    menu_ul.hide();
-			    menu_a.click(function(e) {
-			        e.preventDefault();
-			        if(!$(this).hasClass('active')) {
-			            menu_a.removeClass('active');
-			            menu_ul.filter(':visible').slideUp('normal');
-			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
-			        } else {
-			            $(this).removeClass('active');
-			            $(this).next().stop(true,true).slideUp('normal');
-			        }
-			    });
-
-			});
-		</script>
-
-	
-
-<div class="product-bottom">
-					<div class="of-left-in">
-								<h3 class="best">Лучшая цена</h3>
-							</div>
-					<div class="product-go">
-						<div class=" fashion-grid">
-									<a href="single.html"><img class="img-responsive " src="images/be.jpg" alt=""></a>
-
-								</div>
-							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="#" >1</a></h6>
-
-								<span class=" price-in1">40.00 ₽</span>
-							</div>
-
-							<div class="clearfix"> </div>
-							</div>
-							<div class="product-go">
-						<div class=" fashion-grid">
-									<a href="single.html"><img class="img-responsive " src="images/be1.jpg" alt=""></a>
-
-								</div>
-							<div class="fashion-grid1">
-								<h6 class="best2"><a href="#" >2</a></h6>
-
-								<span class=" price-in1">40.00 ₽</span>
-							</div>
-
-							<div class="clearfix"> </div>
-							</div>
-							<div class="product-go">
-						<div class=" fashion-grid">
-									<a href="single.html"><img class="img-responsive " src="images/be2.jpg" alt=""></a>
-
-								</div>
-							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="#" >3 </a></h6>
-								
-								<span class=" price-in1"><small>70.00 Р </small>40.00 ₽</span>
-							</div>
-
-							<div class="clearfix"> </div>
-							</div>
-				</div>
 				<div class=" per1">
 			</div>
 		</div>
 
 				<div class="col-md-9 product-price1">
 				<div class="col-md-5 single-top">
-					<?php
-					$data = $_POST;
-
-					$link=mysqli_connect('localhost', 'root', '', 'userlistdb')
-						or die("Ошибка " . mysqli_error($link)); 
+					<img style="height: 300px; width: 270px" src="/images/4.png">
+					<h5>Картинка</h5>
+					<form method="POST"action="/a_s.php"enctype="multipart/form-data">
+					<input type="file"name="myimage">
 					
-					$url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-					
-					$n = $_GET['id'];
 
- 				    
-					$query ="SELECT * FROM `products` WHERE id='$n'";
-
-					$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
-					while($row = mysqli_fetch_array($result)){
-
-
-					    	$id=$row['id'];
-					    	$name=$row['name'];
-					    	$price=$row['price'];
-					    	$description=$row['description'];
-					 		$img=$row['image'];
-				    }
-				    
-					  
-					?>
-					<img style="height: 300px; width: 270px" src="/images/<?php echo "$img"?>">
+					<!--<input class="input" id="image" name="image" size="32"   type="text" value=""></label></p>-->
 
 					</div>
 
 					<div class="col-md-7 single-top-in simpleCart_shelfItem">
 						<div class="single-para ">
-						<h4><?php echo "<p>$name </p>"?></h4>
+						<h4>Название</h4>
+						 <input class="input" id="name" name="name"size="32"  type="text" value=""></label></p>
 							<div class="star-on">
 								<ul class="star-footer">
 										<li><a href="#"><i> </i></a></li>
@@ -237,10 +125,13 @@
 							<div class="clearfix"> </div>
 							</div>
 
-							<h5 class="item_price"><?php echo "<p>$price ₽</p>"?></h5>
-							<p><?php echo "<p>$description </p>"?></p>
+							<h5 class="item_price" style="border-bottom: none;">Цена</h5>
+							<input class="input" id="price" name="price" size="32"type="text" value=""></label></p>
+							<p>Описание товара</p>
+							<textarea  class="input" name="description" cols="60" rows="10" placeholder="Введите сообщение"></textarea>
+						<!--	<input class="input" id="description" name="description"size="500" type="text" value=""style="height:250px; width: 250px"></label></p>-->
 							<div class="available">
-							<!--	<ul>
+								<!--	<ul>
 									<li>Выбор параметра
 										<select>
 										<option>Параметр1</option>
@@ -250,17 +141,14 @@
 								<div class="clearfix"> </div>
 							</ul>-->
 						</div>
-							
-								<a href="#" class="add-cart item_add">Купить</a>
+								<input type="submit"name="submit_image"value="Сохранить">
+								<!--<p class="submit"><input class="button" id="register" name= "register" type="submit" value="Сохранить"></p>-->
 
 						</div>
 					</div>
 				</li>
 
-				<div class="clearfix"> </div>
-				<a class="add-re" href="contact.html">Написать нам</a>
-			</div>
-
+	</form>
 </li>
 <div class="clearfix"></div>
 	</ul>
@@ -275,7 +163,8 @@
 				<div class="clearfix"> </div>
 			</div>
 		</div>
-<footer></footer>
-<!--подключить footer-->
+
 </body>
 </html>
+
+

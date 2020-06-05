@@ -82,7 +82,7 @@
 		<ul class="megamenu skyblue">
 			<li><a  href="contact.html">Обратная связь</a></li>
 			<!--<li><a  href="index.html">Главная</a></li>-->
-
+			<li><a  href="admin_login.php" style="color:#b1b0ad;">Админ</a>
 			<li class="active grid"><a  href="product.php">Мыло</a>
 			<li><a  href="about.html">О нас</a>
 				</li>
