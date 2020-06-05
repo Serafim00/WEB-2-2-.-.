@@ -86,7 +86,7 @@
 <body> 
 <header></header>
 <div class="container">
-	<h6 class="dress"><a href="index.php">Главная</a> <i> </i> Страница товара </h6>
+	<h6 class="dress"><a href="product.php">Меню</a> <i> </i> Страница товара </h6>
 </div>
 <div class="back">
 	<h2>СТРАНИЦА ТОВАРА</h2>
