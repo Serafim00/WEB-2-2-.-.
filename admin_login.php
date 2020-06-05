@@ -97,7 +97,7 @@
 	<h6 class="dress"><a href="index.php">Главная</a> <i> </i> Аккаунт </h6>
 </div>
 <div class="back">
-	<h2>АККАУНТ</h2>
+	<h2>АДМИНИСТРАТОР</h2>
 </div>
 
 		<div class="container">
