@@ -4,8 +4,6 @@ $price=$_POST['price'];
 $description=$_POST['description'];
 $img=$_POST['image'];
 
-echo $name,$price, $img;
-
 $link=mysqli_connect('localhost', 'root', '', 'userlistdb');
 
 //$img=addslashes(file_get_contents($_FILES['myimage']['tmp_name']));
@@ -14,6 +12,12 @@ $link=mysqli_connect('localhost', 'root', '', 'userlistdb');
 $query="INSERT INTO products VALUES('','','$name','$description','$price','$img','')";
 
 					$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+
+								ob_start();
+			$new_url = 'http://localhost/product.php';
+			header('Location: '.$new_url);
+			ob_end_flush();
+
 					/**
 
 					

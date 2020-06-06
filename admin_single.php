@@ -98,12 +98,12 @@
 				<div class="col-md-9 product-price1">
 				<div class="col-md-5 single-top">
 					<img style="height: 300px; width: 270px" src="/images/4.png">
-					<h5>Картинка</h5>
+					<h5>Ведите название картинки <br>(как вы ее сохранили в папке images)</h5>
 					<form method="POST"action="/a_s.php"enctype="multipart/form-data">
-					<input type="file"name="myimage">
+					<!--<input type="text"name="myimage">-->
 					
 
-					<!--<input class="input" id="image" name="image" size="32"   type="text" value=""></label></p>-->
+					<input class="input" id="image" name="image" size="32"   type="text" value=""></label></p>
 
 					</div>
 
