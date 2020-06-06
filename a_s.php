@@ -2,20 +2,19 @@
 $name=$_POST['name'];
 $price=$_POST['price'];
 $description=$_POST['description'];
+$img=$_POST['image'];
 
-echo $name, $price;
+echo $name,$price, $img;
 
-$link=mysqli_connect('localhost', 'root', '', 'demo');
+$link=mysqli_connect('localhost', 'root', '', 'userlistdb');
 
-$imagename=$_FILES["myimage"]["name"];
-
-//Получаем содержимое изображения и добавляем к нему слеш
-$imagetmp=addslashes(file_get_contents($_FILES['myimage']['tmp_name']));
+//$img=addslashes(file_get_contents($_FILES['myimage']['tmp_name']));
 
 //Вставляем имя изображения и содержимое изображения в image_table
-$query="INSERT INTO products VALUES('','','$name','$description','$price','$imagetmp','$imagename')";
+$query="INSERT INTO products VALUES('','','$name','$description','$price','$img','')";
 
-					$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); /**
+					$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+					/**
 
 					
 

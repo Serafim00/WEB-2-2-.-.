@@ -129,13 +129,13 @@
 			<div class="col-md-9">
 				<div class="col-top">
 					<div class="col-md-6 black">
-						<a href="single.html"><div class="soap" >
+						<a href="product.php"><div class="soap" >
 							<h3>Мыло простое</h3>
 						</div>
 							<img src="images/14.jpg" width="100px" alt="" ></a>
 					</div>
 					<div class="col-md-6 black-in">
-						<a href="single.html"><div class="soap bag" >
+						<a href="product.phpl"><div class="soap bag" >
 							<h3>Мыло с рисунком</h3>
 						</div>
 							<img src="images/11_1x.png" width="100px" alt="" ></a>
@@ -144,12 +144,12 @@
 				</div>
 				<div class="col-top-bottom">
 					<h3 class="menber">Идеальный подарок на любой праздник!</h3>
-					<a href="single.html" class="now-in">Купить</a>
+					<a href="product.php" class="now-in">Купить</a>
 					<div class="clearfix"> </div>
 				</div>
 			</div>
 			<div class="col-md-3 per">
-				<a href="single.html"><img class="img-responsive" src="https://i.pinimg.com/736x/17/cf/94/17cf9412e80398c5494ec6b1929d4faf.jpg
+				<a href="product.php"><img class="img-responsive" src="https://i.pinimg.com/736x/17/cf/94/17cf9412e80398c5494ec6b1929d4faf.jpg
 " alt="" >
 					<div class="six">
 						<h4>Распрадажа</h4>
