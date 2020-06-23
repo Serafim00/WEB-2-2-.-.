@@ -38,7 +38,9 @@
 	}
 
 ?>
+<?php 
 
+?>
 
 <!--<form action="login.php" method="POST">
 	<strong>Логин</strong>

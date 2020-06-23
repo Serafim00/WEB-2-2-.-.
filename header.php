@@ -105,12 +105,12 @@
 
                     -->
                     <div class="cart box_1">
-                        <a href="checkout.html">
+                        <a href="index1.php?page=cart">
                             <h3> <div class="total">
                                 <span class="simpleCart_total1"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> товаров)</div>
                                 <img src="images/cart.png" alt=""/></h3>
                         </a>
-                        <p><a href="checkout.html" class="simpleCart_empty">Корзина</a></p>
+                        <p><a href="index1.php?page=cart" class="simpleCart_empty">Корзина</a></p>
                         <div class="clearfix"> </div>
                     </div>
 

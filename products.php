@@ -224,6 +224,25 @@
                 <div class="product-right-top">
                     <div class="top-product">
 
+<?php 
+            $link=mysqli_connect('localhost', 'root', '', 'userlistdb')
+                        or die("Ошибка " . mysqli_error($link)); 
+          
+            $query="SELECT * FROM products"; 
+            $result = mysqli_query($link, $query);
+            while($row = mysqli_fetch_array($result)){
+?> 
+            <ul> 
+                <li><?php echo $row['name'] ?></li> 
+                <li><?php echo $row['description'] ?></li> 
+                <li><?php echo $row['price'] ?>$</li> 
+                <li><a href="index1.php?page=products&action=add&id=<?php echo $row['id'] ?>">Add to cart</a></li> 
+            </ul> 
+        <?php 
+           }       
+          
+          
+        ?> 
 
 
                         <?php
