@@ -3,7 +3,7 @@
     require("w/includes/connection.php"); 
     if(isset($_GET['page'])){ 
           
-        $pages=array("products", "cart"); 
+        $pages=array("products", "cart", "single"); 
           
         if(in_array($_GET['page'], $pages)) { 
               

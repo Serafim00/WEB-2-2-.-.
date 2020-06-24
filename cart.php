@@ -11,7 +11,6 @@
         }
 
     }
-
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
@@ -152,7 +151,7 @@
             });   
           });
          </script>
-        
+<form method="post" action="2.php">
 <form method="post" action="product.php?page=cart">
 
   <div class="in-check" >
@@ -181,14 +180,25 @@
                       
                         $subtotal=$_SESSION['cart'][$row['id']]['quantity']*$row['price'];
                         $totalprice+=$subtotal;
+
+                        $name=$row['name'];
+                        $price=$row['price'];
+                        $id=$row['id']
+
+
+
+
                     ?>
+
+
+
                     <ul class="cart-header">
        
-        <li><span><?php echo $row['name'] ?></span></li>
+        <li><span><?php echo $name ?></span></li>
 
-      <li><span><?php echo $row['price'] ?>P</span></li>
+      <li><span><?php echo $price ?>P</span></li>
 
-      </li><li><span><input type="text" name="quantity[<?php echo $row['id'] ?>]" size="5" value="<?php echo $_SESSION['cart'][$row['id']]['quantity'] ?>" /></span></li>
+      </li><li><span><input type="text" name="quantity[<?php echo $id ?>]" size="5" value="<?php echo $_SESSION['cart'][$row['id']]['quantity'] ?>" /></span></li>
 
       </li><li><span><?php echo $_SESSION['cart'][$row['id']]['quantity']*$row['price'] ?>P</span></li>
 
@@ -208,10 +218,10 @@
 
 <button type="submit" name="submit">Обновить корзину</button> 
 </form> 
-     
+    <!-- <button type="submit" name="zakaz" href="http://localhost/1.php">Оформить заказ</button> -->
+   </form>
     </div>
   </div>
-            
 </div>
 </div>
         <div class="clearfix"> </div>
