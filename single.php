@@ -1,7 +1,38 @@
-
-
-
-
+<?php 
+  
+    if(isset($_GET['action']) && $_GET['action']=="add"){ 
+          
+        $id=intval($_GET['id']); 
+          
+        if(isset($_SESSION['cart'][$id])){ 
+              
+            $_SESSION['cart'][$id]['quantity']++; 
+              
+        }else{ 
+                        $link=mysqli_connect('localhost', 'root', '', 'userlistdb')
+                        or die("Ошибка " . mysqli_error($link)); 
+            $sql_s="SELECT * FROM products WHERE id={$id}"; 
+            $query_s=mysqli_query($link, $sql_s); 
+            if(mysqli_num_rows($query_s)!=0){ 
+                $row_s=mysqli_fetch_array($query_s); 
+                  
+                $_SESSION['cart'][$row_s['id']]=array( 
+                        "quantity" => 1, 
+                        "price" => $row_s['price'] 
+                    ); 
+                  
+                  
+            }else{ 
+                  
+                $message="This product id it's invalid!"; 
+                  
+            } 
+              
+        } 
+          
+    } 
+  
+?> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -251,7 +282,7 @@
 							</ul>-->
 						</div>
 							
-								<a href="#" class="add-cart item_add">Купить</a>
+								<?php print(" <a href='index1.php?page=products&action=add&id=$id' class='add-cart item_add'>Купить</a>");?>
 
 						</div>
 					</div>

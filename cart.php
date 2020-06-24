@@ -153,7 +153,7 @@
           });
          </script>
         
-<form method="post" action="index1.php?page=cart">
+<form method="post" action="product.php?page=cart">
 
   <div class="in-check" >
       <ul class="unit">
