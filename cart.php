@@ -151,7 +151,6 @@
             });   
           });
          </script>
-<form method="post" action="2.php">
 <form method="post" action="product.php?page=cart">
 
   <div class="in-check" >
@@ -172,10 +171,12 @@
                   foreach($_SESSION['cart'] as $id => $value) {
                       $sql.=$id.",";
                   }
+                  $row="товаров нет";
 
                   $sql=substr($sql, 0, -1).") ORDER BY name ASC";
                   $result = mysqli_query($link, $sql);
                   $totalprice=0;
+                
                   while($row = mysqli_fetch_array($result)){
                       
                         $subtotal=$_SESSION['cart'][$row['id']]['quantity']*$row['price'];
@@ -212,13 +213,16 @@
                     <tr> 
                         <td colspan="4">Итого к оплате: <?php echo $totalprice ?> Рублей</td>
                     </tr>
-                  <?php  }?>
+                  <?php  }
+                
+                ?>
 
      
 
 <button type="submit" name="submit">Обновить корзину</button> 
 </form> 
-    <!-- <button type="submit" name="zakaz" href="http://localhost/1.php">Оформить заказ</button> -->
+  <form method="post" action="1.php">
+    <button type="submit" name="zakaz">Оформить заказ</button> 
    </form>
     </div>
   </div>

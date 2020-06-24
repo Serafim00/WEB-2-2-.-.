@@ -52,13 +52,13 @@
 													    $name_p= $_SESSION['logged_user']->login;
 
 
-														$link=mysqli_connect('localhost', 'root', '', 'usertable')
+														$link=mysqli_connect('localhost', 'root', '', 'userlistdb')
                                                                                 or die("Ошибка " . mysqli_error($link));
                                                                             $query ="SELECT * FROM `users` WHERE login='$name_p'";
                                                                             $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
                                                                             while($row = mysqli_fetch_array($result)){
                                                                             $id_p=$row['id'];}
-                                                        $link=mysqli_connect('localhost', 'root', '', 'usertable')
+                                                        $link=mysqli_connect('localhost', 'root', '', 'userlistdb')
                                                                                 or die("Ошибка " . mysqli_error($link));
                                                                             $query ="SELECT * FROM `dostavka` WHERE pusto='$id_p'";
                                                                             $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
