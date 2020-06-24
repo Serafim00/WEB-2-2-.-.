@@ -38,12 +38,12 @@
 <li>
 <?php if ( isset ($_SESSION['logged_user']) ) : ?>
     
-    Приветствуем, <?php echo $_SESSION['logged_user']->login; ?>!<br/></li>
+    <a>Приветствуем, <?php echo $_SESSION['logged_user']->login; ?>!</a><br/></li>
 
 <li>    <a href="logout.php">Выйти</a></li>
 
 <?php else : ?>
-Вы не авторизованы!<br/>
+<a>Вы не авторизованы!<a><br/>
 
 <li><a href="/login.php">Войти</a></li>
 <li><a href="/signup.php">Создать аккаунт</a></li>
@@ -105,12 +105,12 @@
 
                     -->
                     <div class="cart box_1">
-                        <a href="index1.php?page=cart">
+                        <a href="product.php?page=cart">
                             <h3> <div class="total">
                                 <span class="simpleCart_total1"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> товаров)</div>
                                 <img src="images/cart.png" alt=""/></h3>
                         </a>
-                        <p><a href="index1.php?page=cart" class="simpleCart_empty">Корзина</a></p>
+                        <p><a href="product.php?page=cart" class="simpleCart_empty">Корзина</a></p>
                         <div class="clearfix"> </div>
                     </div>
 
